@@ -1,8 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/HomePage.jsx';
+import Header from './components/Header.jsx';
 
 const App = () => {
   return (
-    <div>App</div>
+    <BrowserRouter>
+      <Header/>
+      <Routes>
+        <Route path='/' element={<LandingPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
